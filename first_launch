@@ -1,0 +1,12 @@
+#!/bin/bash
+rm .env
+touch .env
+echo POSTGRES_USER=postgres >> .env
+echo POSTGRES_PASSWORD=postgres >> .env
+echo SECRET_KEY='"django-insecure-ilih-98fe40c2$xhga=h)r92%%l*ld#ivhviul3ja^k50!*!($"' >> .env
+echo HOST_LIST='"127.0.0.1 localhost backend"' >> .env
+docker-compose up --build -d
+docker-compose exec backend python manage.py makemigrations api
+docker-compose exec backend python manage.py migrate
+docker-compose exec backend python manage.py collectstatic --no-input
+docker-compose exec backend python manage.py loaddata db.json

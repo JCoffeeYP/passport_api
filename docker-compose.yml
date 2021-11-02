@@ -9,7 +9,7 @@ services:
       - ./.env
 
   backend:
-    image: isvnik/passport_api:v1.01
+    build: ./passport_api/
     restart: always
     volumes:
       - static_value:/code/static/

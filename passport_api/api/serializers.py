@@ -20,6 +20,7 @@ class PassportSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'Дата выдачи паспорта не может быть '
                 'позже даты окончания действительности.')
+        return data
 
 
 class AccountSerializer(serializers.ModelSerializer):
