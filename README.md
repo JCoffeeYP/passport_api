@@ -3,7 +3,7 @@ Test task for interview
 
 ## Инструкция по установке
 
-1. Склонировать проект `git clone https://github.com/JCoffeeYP/yamdb_final.git`
+1. Склонировать проект `git clone https://github.com/JCoffeeYP/passport_api.git`
 2. запустить скрипт `./first_launch`
 3. Будет создан суперпользователь с логином: admin и паролем:admin
 4. Получить свежий токен по эндпоинту `http://127.0.0.1/auth/jwt/create/`
